@@ -12,7 +12,7 @@ def main_menu():
       option = int(input("\nPlease selct an option: "))
 
       if (option == 1):
-        GPT.main_output()
+        GPT.launch()
       elif (option == 2):
         option_menu()
       elif (option == 3):
