@@ -2,6 +2,9 @@ from openai import OpenAI
 import time
 import os
 
+#api_key = open("path-to-file/openai_api_key.txt").read()
+#OpenAI.api_key = api_key
+
 client = OpenAI()
 
 def print_text_animation(text):
@@ -11,6 +14,7 @@ def print_text_animation(text):
     
   print("\n")
 
+#Choose which version of ChatGPT
 def GPT_option(option):
   gpt_versions = option
 
@@ -32,6 +36,7 @@ def GPT_option(option):
     line = "{}={}={}".format(versions[0], versions[1], versions[2])
     file_versions.write(line)
 
+#Different ChatGPT version
 class all_gpt:
   with open ("version.txt", "rt") as file_versions:
     versions = file_versions.readline().split("=")
@@ -50,7 +55,6 @@ class all_gpt:
     )
 
     return completion.choices[0].message.content.strip()
-    #return completion
 
   def GPT_3p5_turbo(prompt):
     completion = client.chat.completions.create(
@@ -66,8 +70,8 @@ class all_gpt:
     )
 
     return completion.choices[0].message.content.strip()
-    #return completion
 
+#Create chat log
 def create_log(dateTime):
   with open ("GPT Log/" + dateTime + ".txt", "x") as log_file:
     header_line = "Date and time: {}\n".format(dateTime)
@@ -106,8 +110,10 @@ def output():
 
     conversation_history.append({"role" : "assistant", "content" : response})
 
+    #Write everytime when user input and chatGPT output
+    time_stamp = time.strftime("%H:%M:%S")
     with open("GPT Log/" + file_name + ".txt", "at") as write_file:
-      log = "\n{}\n{}\n".format({"role" : "user", "content" : user_input}, {"role" : "assistant", "content" : response})
+      log = "\n{}\n{}\n{}\n".format(time_stamp, {"role" : "user", "content" : user_input}, {"role" : "assistant", "content" : response})
       write_file.write(log)
 
     while len(conversation_history) > 6:
