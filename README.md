@@ -30,5 +30,9 @@ After all the setup you can just run the code from ```main.py```
 - Will add more GPT version
 - Able to get image and audio from ChatGPT
 
+# Reference
+- OpenAI Official Documentation https://platform.openai.com/docs/overview
+- OpenAI Cookbook https://cookbook.openai.com
+
 # DuranDurannn Note
 I know the code is spaghetti but this is my first program I created. Feel free to give any suggestion for the program. Thank you :D
