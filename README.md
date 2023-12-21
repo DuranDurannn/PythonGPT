@@ -10,15 +10,15 @@ First, install the OpenAI library:
 pip install openai
 ```
 After that, you can set the ```OpenAI.api_key``` by copying your api key at the ```openai_api_key.txt``` or you can use the Anaconda (I use Miniconda) to set the api key too
+<br>
+<br>Command line for setting the API key in an enviroment: 
 ```bash
 setx OPENAI_API_KEY "your_api_key_here"
 ```
-You can check your api key by
+Command line for checking your API key:
 ```bash
 echo %OPENAI_API_KEY%
 ```
-
-
 After all the setup you can just run the code from ```main.py```
 
 ## Feature
