@@ -9,7 +9,9 @@ First, install the OpenAI library:
 ```bash
 pip install openai
 ```
-After that, you can set the ```OpenAI.api_key``` by copying your api key at the ```openai_api_key.txt``` or you can use the Anaconda (I use Miniconda) to set the api key too
+For me, i use Anaconda (Miniconda) to set up an enviroment in order to contain the library and also set the API key. Can check out reference for more info.
+<br>
+<br>After that, you can set the ```OpenAI.api_key``` by copying your api key at the ```openai_api_key.txt``` 
 <br>
 <br>Command line for setting the API key in an enviroment: 
 ```bash
@@ -33,6 +35,8 @@ After all the setup you can just run the code from ```main.py```
 # Reference
 - OpenAI Official Documentation https://platform.openai.com/docs/overview
 - OpenAI Cookbook https://cookbook.openai.com
+- Miniconda docummentation https://docs.conda.io/projects/miniconda/en/latest/
+- Miniconda cheat sheet https://know.continuum.io/rs/387-XNW-688/images/conda-cheatsheet.pdf
 
 # DuranDurannn Note
 I know the code is spaghetti but this is my first program I created. Feel free to give any suggestion for the program. Thank you :D
